@@ -1,4 +1,5 @@
-#led = machine.Pin(4, machine.Pin.OUT)
+import machine
+led = machine.Pin(4, machine.Pin.OUT)
 import camera
 camera.init(0, format=camera.JPEG, fb_location=camera.DRAM)
 
