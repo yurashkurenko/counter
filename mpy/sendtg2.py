@@ -3,10 +3,14 @@ import machine
 import camera
 import time
 import urequests
+import uos
 
 led = machine.Pin(4, machine.Pin.OUT)
 camera.init()
 led.on()
 time.sleep(2)
 buf=camera.capture()
+f=open('foto.jpg','w')
+f.write(buf)
+f.close()
 led.off()
