@@ -5,7 +5,7 @@ import time
 import urequests
 
 led = machine.Pin(4, machine.Pin.OUT)
-camer.init()
+camera.init()
 led.on()
 time.sleep(2)
 buf=camera.capture()
