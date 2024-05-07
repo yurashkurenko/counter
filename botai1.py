@@ -33,6 +33,15 @@ def db_add_device(user_id, device_info):
         devices = db_get_device_list(user_id)
         devices.append(device_info)
         db[f"devices_{user_id}"] = ';'.join(devices)
+        filename=str(user_id)+str(device_info)
+        filename=filename.replace(«,», «-»)
+#        filename=filename.replace(«,», «-»)
+        f=open(filename,'w')
+        f.write(device_info)
+        f.close()
+
+
+
 
 def db_remove_device(user_id, device_id):
     with Vedis(DATABASE) as db:
