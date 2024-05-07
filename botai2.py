@@ -34,7 +34,7 @@ def db_add_device(user_id, device_info):
         devices.append(device_info)
         db[f"devices_{user_id}"] = ';'.join(devices)
         dev_id=device_info.split(',')[0]
-        filename=str(user_id)+'-'str(dev_id)
+        filename=str(user_id)+'-'+str(dev_id)
         f=open(filename,'w')
         f.write(device_info)
         f.close()
