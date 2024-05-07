@@ -75,7 +75,7 @@ async def any_message(message: Message):
 @dp.message(Command(commands=['start', 'help']))
 async def send_welcome(message: Message):
     await message.reply("Привет! Я бот для управления устройствами снятия показаний.\n Используйте команды:\n"
-                        "/add_device <id>,<wifi>,<devname>,<polling> - Добавить устройство\n"
+                        "/add_device --<id>,<wifi>,<devname>,<polling> - Добавить устройство\n"
                         "/delete_device <id> - Удалить устройство\n"
                         "/list_devices - Показать список устройств\n"
                         "/get_device <id> - Получить информацию об устройстве")
@@ -88,7 +88,7 @@ async def add_device(message: Message):
     #args = command.args
     #print(message.chat.id)
 #    print(message.text)
-    args=message.text.split(' ')[1]
+    args=message.text.split('--')[1]
     args=args+','+str(message.from_user.id)
     db_add_device(message.from_user.id, args)
     await message.reply("Устройство добавлено!")
