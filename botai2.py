@@ -88,7 +88,7 @@ async def add_device(message: Message):
     #args = command.args
     #print(message.chat.id)
 #    print(message.text)
-    args=message.text.split('--')[1]
+    args=message.text.split('***')[1]
     args=args+','+str(message.from_user.id)
     db_add_device(message.from_user.id, args)
     await message.reply("Устройство добавлено!")
