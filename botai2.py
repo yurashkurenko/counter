@@ -39,9 +39,6 @@ def db_add_device(user_id, device_info):
         f.write(device_info)
         f.close()
 
-
-
-
 def db_remove_device(user_id, device_id):
     with Vedis(DATABASE) as db:
         devices = db_get_device_list(user_id)
@@ -78,36 +75,13 @@ async def any_message(message: Message):
 @dp.message(Command(commands=['start', 'help']))
 async def send_welcome(message: Message):
     await message.reply("Привет! Я бот для управления устройствами снятия показаний.\n Используйте команды:\n"
-                        "/add_device <id>,<wifi>,<polling> - Добавить устройство\n"
+                        "/add_device <id>,<wifi>,<devname>,<polling> - Добавить устройство\n"
                         "/delete_device <id> - Удалить устройство\n"
                         "/list_devices - Показать список устройств\n"
                         "/get_device <id> - Получить информацию об устройстве")
 
 
-#@dp.message(Command(commands=['add_device']))
-#async def add_device(message: Message):
-#async def add_device(message: types.Message,
-#                        command: CommandObject):
-#    args = command.args
-#    await message.answer(args)
 
-
-#    print('Добавление устройства')
-#    await message.reply('Добавление устройства')
-#    print(message)
-#    args = message.get_args().split(',')
- #   if len(args) != 3:
- #       await message.reply("Неверные аргументы. Используйте формат <id>,<wifi>,<polling>")
- #       return
-#    db_add_device(message.from_user.id, ','.join(args))
-#    await message.reply("Устройство добавлено!")
-
-
-#@admin_router.message(Command('info'))
-#async def get_user_info(message: type.Message,
-#                        command: CommandObject):
-#    args = command.args
-#    await message.answer(args)
 
 @dp.message(Command(commands=['add_device']))
 async def add_device(message: Message):
@@ -115,24 +89,10 @@ async def add_device(message: Message):
     #print(message.chat.id)
 #    print(message.text)
     args=message.text.split(' ')[1]
-    args=args+','+str(message.from_user.id)+','+str(message.chat.username)
+    args=args+','+str(message.from_user.id)
     db_add_device(message.from_user.id, args)
     await message.reply("Устройство добавлено!")
-#    print(str(message))
-#    id=args.split(',')[0]
-#    print(id)
-#    wifi=id=args.split(',')[1]
-#    print(wifi)
-#    polling=args.split(',')[2]
-#    print(polling)
-#/add_device <id>,<wifi>,<polling> - Добавить устройство
-#db_add_device(user_id, device_info)
-#    await message.answer(args)
-#    db_add_device(message.from_user.id, ','.join(args))
-#args=str(massage.user_id)+','+str(massage.chat_id)+','+args
-#    db_add_device(message.from_user.id, args)
-#    await message.reply("Устройство добавлено!")
-#    print(message.text)
+
 
 #@dp.message(Command(commands=['add_device']))
 #async def get_device(message: Message):
