@@ -38,6 +38,10 @@ def db_add_device(user_id, device_info):
         f=open(filename,'w')
         f.write(device_info)
         f.close()
+        filename=str(dev_id)
+        f=open(filename,'w')
+        f.write(device_info)
+        f.close()
 
 def db_remove_device(user_id, device_id):
     with Vedis(DATABASE) as db:
