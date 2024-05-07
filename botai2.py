@@ -75,7 +75,7 @@ async def any_message(message: Message):
 @dp.message(Command(commands=['start', 'help']))
 async def send_welcome(message: Message):
     await message.reply("Привет! \nЯ бот для управления устройствами снятия показаний.\n Используйте команды:\n"
-                        "/add_device --<id>,<wifi>,<devname>,<polling> - Добавить устройство\n"
+                        "/add_device ***id, SSID PASSWORD, Описание, период - Добавить устройство\n"
                         "/delete_device <id> - Удалить устройство\n"
                         "/list_devices - Показать список устройств\n"
                         "/get_device <id> - Получить информацию об устройстве")
