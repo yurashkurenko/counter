@@ -1,0 +1,13 @@
+send: b'POST /bot1701291551:AAEk2TbH7mbHLP
+send: b'--97d81ac404017fec19458e34bae65b01
+reply: 'HTTP/1.1 200 OK\r\n'
+header: Server: nginx/1.18.0
+header: Date: Sat, 11 May 2024 16:58:37 GM
+header: Content-Type: application/json
+header: Content-Length: 1128
+header: Connection: keep-alive
+header: Strict-Transport-Security: max-age
+header: Access-Control-Allow-Origin: *
+header: Access-Control-Allow-Methods: GET,
+header: Access-Control-Expose-Headers: Con
+~
