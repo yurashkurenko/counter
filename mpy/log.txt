@@ -1,3 +1,8 @@
+
+send: b'POST /bot1701291551:AAEk2TbH7mbHLPVVBrP0gEOSZBezbjH1FHY/sendPhoto HTTP/1.1\r\nHost: api.telegram.org\r\nUser-Agent: python-requests/2.31.0\r\nAccept-Encoding: gzip, deflate\r\nAccept: */*\r\nConnection: keep-alive\r\nContent-Length: 93740\r\nContent-Type: multipart/form-data; boundary=97d81ac404017fec19458e34bae65b01\r\n\r\n' send: b'--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="chat_id"\r\n\r\n159085018\r\n--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="photo"; filename="Magic_Poser.jpg"\r\n\r\n\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xe2\x02(ICC_PROFILE\x00\x01\x01\x00\x00\x02\x18\x00\x00\x00\x00\x02\x10\x00\x00mntrRGB XYZ \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00acsp\x00\x00\x00\x0--More--
+
+
+
 send: b'POST /bot1701291551:AAEk2TbH7mbHLP
 send: b'--97d81ac404017fec19458e34bae65b01
 reply: 'HTTP/1.1 200 OK\r\n'
