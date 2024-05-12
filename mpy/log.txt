@@ -3,6 +3,9 @@ send: b'POST /bot1701291551:AAEk2TbH7mbHLPVVBrP0gEOSZBezbjH1FHY/sendPhoto HTTP/1
 
 
 
+\x1e\xac5\x00\x01S\n`\x00=CP\x00\rE@\x00=Xj\x00\x01\xa8j\x00\x01\xa8j\x00\x01\xa8j\x00\x01\xa8j\x00\x01\xaa\r@\x005\x1d \x00\n\x00\x00\x00\xa4\x00\x01H\x00\x00\xff\xd9\r\n--97d81ac404017fec19458e34bae65b01--\r\n'                                        reply: 'HTTP/1.1 200 OK\r\n'              header: Server: nginx/1.18.0              header: Date: Sat, 11 May 2024 16:58:37 GMT                                         header: Content-Type: application/json    header: Content-Length: 1128              header: Connection: keep-alive            header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload     header: Access-Control-Allow-Origin: *    header: Access-Control-Allow-Methods: GET, POST, OPTIONS                            header: Access-Control-Expose-Headers: Content-Length,Content-Type,Date,Server,Connection                                     root@localhost:~/counter2#
+
+
 send: b'POST /bot1701291551:AAEk2TbH7mbHLP
 send: b'--97d81ac404017fec19458e34bae65b01
 reply: 'HTTP/1.1 200 OK\r\n'
