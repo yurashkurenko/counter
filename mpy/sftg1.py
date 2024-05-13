@@ -7,5 +7,14 @@ def multupartdata(chat_id,image):
     mpdata=boundary+crlf+chatpart+boundary+crlf+imagepart+crlf+boundary
     print(mpdata)
     return mpdata
-     
+    
+def sendphotototg(token,chat_id,image):
+    url="api.telegram.org"
+    header="Content-Type: multipart/form-data"
+    data=multupartdata(chat_id,image)
+    print(url)
+    print(url)
+    print(header)
+    return mpdata
+          
 multupartdata("12345","image")
