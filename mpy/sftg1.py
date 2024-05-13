@@ -7,3 +7,4 @@ def multupartdata(chatid,image):
     print(mpdata)
     return mpdata
      
+multupartdata("12345","image")
