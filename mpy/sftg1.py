@@ -5,7 +5,6 @@ def multupartdata(chat_id,image):
     chatpart="Content-Disposition: form-data; name='chat_id'"\r\n\r\n"+chat_id+"\r\n"
     #Content-Type: multipart/form-data
     filename="Magic_Poser.jpg"
-    
     imagepart="Disposition: form-data; name='photo'; filename="+filename
     mpdata=boundary+crlf+chatpart+boundary+crlf+imagepart+crlf+boundary
     print(mpdata)
