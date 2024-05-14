@@ -6,9 +6,11 @@ from settings import TOKEN,CHATID
 def send_photo(chat_id, photo_path, token):                                             
   url = f'https://api.telegram.org/bot{token}/sendPhoto'                              
   with open(photo_path, 'rb') as photo:         
-    files = {'photo': photo}                  
-    data = {'chat_id': chat_id}               
-    r = requests.post(url, files=files, data=data)                                      
+#    files = {'photo': photo}                  
+#    data = {'chat_id': chat_id}
+    headers="Content-Type: multipart/form-data; boundary=97d81ac404017fec19458e34bae65b01\r\n\r\n"
+    data=
+    r = requests.post(url,headers, data=data)                                      
   return r.json()                                                             
 # Использование                           
 if __name__ == '__main__':                
