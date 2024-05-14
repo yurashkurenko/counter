@@ -23,3 +23,7 @@ def sendphotototg(token,chat_id,image):
     return mpdata
           
 multupartdata("159085018","image")
+token=
+chat_id=
+image=
+
