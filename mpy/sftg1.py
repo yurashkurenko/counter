@@ -3,7 +3,7 @@ def multupartdata(chat_id,image):
     crlf = "\\r\\n"
     crlf2 = "\\r\\n\\r\\n"
     chatpart="Content-Disposition: form-data; name="+chat_id+"\r\n\r\n159085018\r\n"
-    Content-Type: multipart/form-data
+    #Content-Type: multipart/form-data
     filename="Magic_Poser.jpg"
     imagepart="Disposition: form-data; name="+photo+"; filename="+filename
     mpdata=boundary+crlf+chatpart+boundary+crlf+imagepart+crlf+boundary
