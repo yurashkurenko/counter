@@ -9,9 +9,8 @@ def send_photo(chat_id, photo_path, token):
 #    files = {'photo': photo}                  
 #    data = {'chat_id': chat_id}
     headers="Content-Type: multipart/form-data; boundary=97d81ac404017fec19458e34bae65b01\r\n\r\n"
-    data=b'--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="chat_id"\r\n\r\n159085018\r\n--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="photo"; filename="Magic_Poser.jpg"\r\n\r\n\'
-    datastr=data.encode()
-    f=open("photo_path","r")
+    data=b'--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="chat_id"\r\n\r\n159085018\r\n--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="photo"; filename="Magic_Poser.jpg"\r\n\r\n'
+    f=open(photo_path,"r")
     imgbstr=f.read()
     f.close()
     data=data+imgbstr+b'\r\n--97d81ac404017fec19458e34bae65b01--\r\n\r\n'
