@@ -9,7 +9,7 @@ def send_photo(chat_id, photo_path, token):
 #    files = {'photo': photo}                  
 #    data = {'chat_id': chat_id}
     headers="Content-Type: multipart/form-data; boundary=97d81ac404017fec19458e34bae65b01\r\n\r\n"
-    data=
+    data=b'--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="chat_id"\r\n\r\n159085018\r\n--97d81ac404017fec19458e34bae65b01\r\nContent-Disposition: form-data; name="photo"; filename="Magic_Poser.jpg"\r\n\r\n\'
     r = requests.post(url,headers, data=data)                                      
   return r.json()                                                             
 # Использование                           
