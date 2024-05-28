@@ -1,7 +1,7 @@
 import requests
 
 # Указываем URL сервера, к которому обращаемся
-url = 'http://127.0.0.1:5005/devpara'
+url = 'https://tg/devpara'
 
 # Задаём device_id, который хотим запросить
 device_id = ''
