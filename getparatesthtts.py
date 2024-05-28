@@ -1,10 +1,10 @@
 import requests
 
 # Указываем URL сервера, к которому обращаемся
-url = 'https://tg/devpara'
+url = 'https://tgdj.ubnt.cloudns.cl/devpara'
 
 # Задаём device_id, который хотим запросить
-device_id = ''
+device_id = '1212121212'
 
 # Создаём словарь с данными, которые будут отправлены в POST-запросе
 data = { 'device_id': device_id }
