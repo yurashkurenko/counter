@@ -1,6 +1,6 @@
 import urequests as requests
 
-def getpara(url,dev)
+def getpara(url,dev):
     data = { 'device_id': dev }
     headers = { 'Content-Type': 'application/json' }
     response = requests.post(url, json=data, headers=headers)
