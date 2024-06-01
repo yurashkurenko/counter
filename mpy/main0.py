@@ -1,4 +1,4 @@
-from settings import url,devid
+from settings import url,deviceid
 from getpara import getpara
-para=getpara(url,devid)
+para=getpara(url,deviceid)
 print(para)
