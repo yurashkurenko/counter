@@ -10,3 +10,4 @@ def getpara(url,dev):
     else:
         print("Failed to get device parameters. Status code:", response.status_code)
         getpara={"status":"None"}
+    return getpara
