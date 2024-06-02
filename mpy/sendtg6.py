@@ -19,12 +19,19 @@ def send_photo(token, chat_id, photo_path, caption):
     data=data+imgbstr+b'\r\n--97d81ac404017fec19458e34bae65b01--\r\n\r\n'
     r = requests.post(url,headers=headers,data=data)
   return r.json()
-# _____________                                                                                                                                                                                          #if __name__ == 'main':
+# Функция отправки картинки с заголовком_____________
+                                                                                                                       #if __name__ == 'main':
 from settings import TOKEN,CHATID
 IMAGE_FILENAME = 'girl.jpg'
-CAPTION=b'Hello-hello\xd0\x9f\xd1\x80\xd0\xb8\xd0\xb2\xd0\xb5\xd1\x82 \
-\xd0\xb8\xd0\xb7\xd0\xb3\xd0\xbb\xd1\x83\xd0\xb1\xd0\xb8\xd0\xbd\xd1\x8b \
-\xd0\xb2\xd1\x81\xd0\xb5\xd0\xbb\xd0\xb5\xd0\xbd\xd0\xbd\xd0\xbe\xd0\xb9\r\n'
-# __________ ___________                                                                                                                                                                                 print('123...')
+text='Функция отправки картинки с заголовком'
+CAPTION=text.encode()
+#CAPTION=b'Hello-hello\xd0\x9f\xd1\x80\xd0\xb8\xd0\xb2\xd0\xb5\xd1\x82 \
+#\xd0\xb8\xd0\xb7\xd0\xb3\xd0\xbb\xd1\x83\xd0\xb1\xd0\xb8\xd0\xbd\xd1\x8b \
+#\xd0\xb2\xd1\x81\xd0\xb5\xd0\xbb\xd0\xb5\xd0\xbd\xd0\xbd\xd0\xbe\xd0\xb9\r\n \
+#Hello-hello\xd0\x9f\xd1\x80\xd0\xb8\xd0\xb2\xd0\xb5\xd1\x82 \
+#\xd0\xb8\xd0\xb7\xd0\xb3\xd0\xbb\xd1\x83\xd0\xb1\xd0\xb8\xd0\xbd\xd1\x8b \
+#\xd0\xb2\xd1\x81\xd0\xb5\xd0\xbb\xd0\xb5\xd0\xbd\xd0\xbd\xd0\xbe\xd0\xb9\r\n'
+# __________ ___________
+print('123...')
 result = send_photo(TOKEN, CHATID, IMAGE_FILENAME, CAPTION)
 #print(result)
