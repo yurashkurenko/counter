@@ -11,11 +11,11 @@ def getdevparajsonfromid(dev_id):
         para=idb[dev_id].decode()
         id_dev=para.split(",")[0]
         wifissid=para.split(",")[1]
-        wifipwd=para.split(",")[1]
-        description=para.split(",")[2]
-        polling=para.split(",")[3]
-        lighting=para.split(",")[1]
-        chatid=para.split(",")[4]
+        wifipwd=para.split(",")[2]
+        description=para.split(",")[3]
+        polling=para.split(",")[4]
+        lighting=para.split(",")[5]
+        chatid=para.split(",")[6]
         return {"id_dev":id_dev,"wifissid":wifissid, \
         "description":description, "polling":polling, \
-        "chatid":chatid}
+        "lighting":lighting, "chatid":chatid}
