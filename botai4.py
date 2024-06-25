@@ -67,25 +67,11 @@ def db_get_device(user_id, device_id):
 
 # Если не указать фильтр F.text,
 # то хэндлер сработает даже на картинку с подписью /test
-@dp.message(F.text, Command("test"))
-async def any_message(message: Message):
-    await message.answer(
-        "Hello, <b>world</b>!",
-        parse_mode=ParseMode.HTML
-    )
-    await message.answer(
-        "Hello, *world*\!",
-        parse_mode=ParseMode.MARKDOWN_V2
-    )
-
-
-
-
 
 @dp.message(Command(commands=['start', 'help']))
 async def send_welcome(message: Message):
     await message.reply("Привет! \nЯ бот для управления устройствами снятия показаний.\n Используйте команды:\n"
-                        "/add_device ***id, SSID PASSWORD, Описание, период - Добавить устройство\n"
+                        "/add_device ***id, SSID, PASSWORD, Описание, период, освещение - Добавить устройство\n"
                         "/delete_device <id> - Удалить устройство\n"
                         "/list_devices - Показать список устройств\n"
                         "/get_device <id> - Получить информацию об устройстве")
