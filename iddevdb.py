@@ -16,6 +16,6 @@ def getdevparajsonfromid(dev_id):
         polling=para.split(",")[4]
         lighting=para.split(",")[5]
         chatid=para.split(",")[6]
-        return {"id_dev":id_dev,"wifissid":wifissid, \
+        return {"id_dev":id_dev,"wifissid":wifissid,"wifipwd":wifipwd, \
         "description":description, "polling":polling, \
         "lighting":lighting, "chatid":chatid}
